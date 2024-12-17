@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <!-- HEADER SECTION CODE  -->
+         
+      <header>
+
+        <a href="#home" class="logo">Down <span>Town</span></a>
+        
+    </header>
+
+
+  <!-- Set Goals Section -->
+  <div id="goalSection">
+    <h3>Set Your Fitness Goal</h3>
+    <form id="goalForm">
+      <label for="calorieGoal">Calorie Goal:</label>
+      <input type="number" id="calorieGoal" min="1" placeholder="e.g., 300" required>
+      <button type="submit">Set Goal</button>
+    </form>
+    <p id="goalMessage"></p>
+  </div>
+
+  <!-- Record Activities Section -->
+  <div id="activitySection">
+    <h3>Record Your Activity</h3>
+    <form id="activityForm">
+      <label for="activityType">Activity Type:</label>
+      <select id="activityType" required>
+        <option value="walking">Walking</option>
+        <option value="swimming">Swimming</option>
+        <option value="cycling">Cycling</option>
+        <option value="running">Running</option>
+        <option value="yoga">Yoga</option>
+        <option value="weightlifting">Weightlifting</option>
+      </select>
+      <label for="metric1">Metric 1 (Steps / Laps / Reps):</label>
+      <input type="number" id="metric1" min="1" placeholder="Enter value" required>
+      <label for="metric2">Metric 2 (Distance / Time):</label>
+      <input type="number" id="metric2" min="1" placeholder="Enter value" required>
+      <label for="metric3">Metric 3 (Heart Rate / Duration):</label>
+      <input type="number" id="metric3" min="1" placeholder="Enter value" required>
+      <button type="submit">Record Activity</button>
+    </form>
+    <p id="activityMessage"></p>
+  </div>
+
+  <!-- Monitor Progress Section -->
+  <div id="progressSection">
+    <h3>Monitor Your Progress</h3>
+    <p id="progressDisplay">No activities recorded yet.</p>
+
+    <!-- Progress Table -->
+    <table id="progressTable">
+      <thead>
+        <tr>
+          <th>Activity Type</th>
+          <th>Metric 1</th>
+          <th>Metric 2</th>
+          <th>Metric 3</th>
+          <th>Calories Burned</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Activities will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  
+
+  <script src="script2.js"></script>
+</body>
+</html>
